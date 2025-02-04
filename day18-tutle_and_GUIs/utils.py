@@ -55,7 +55,7 @@ def draw_spiralgraph(turtle:Turtle,speed=0,steps=100,radius=100):
     Which is a series of circle, each attained by rotating the previous one to a certain angle and assigned a random color
     """
     turtle.speed(speed)
-    for step in range(steps):
+    for _ in range(steps):
         assign_pencolor(turtle)
-        turtle.setheading((step+1) * 360/steps)
+        turtle.setheading(turtle.heading() +  360/steps)
         turtle.circle(100)
