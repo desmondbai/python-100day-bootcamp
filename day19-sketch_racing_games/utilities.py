@@ -22,7 +22,7 @@ class Race:
 
         # Naming, Coloring and Lining up all of the turtles
 
-        # Calculate y coordinates of all the turtles
+        # Calculate the y coordinates of all of the turtles
         y_coords = linspace(-self.height/2,self.height/2,self.num_turtles+2)[1:-1]
         for i in range(self.num_turtles):
             name = self.screen.textinput(title=GAME_NAME, prompt=f"Give a name to turtle number {i+1}")
@@ -60,7 +60,7 @@ class Race:
     def check_winners(self):
         max_x = self.width/2
         for name,turtle in self.turtles.items():
-            #find the turtle with max x_coord, return it if it's pass the finishing line
+            #find the turtle with max x_coord, return it if it's passed the finishing line
             x_turtle = turtle.pos()[0]
             if x_turtle > max_x:
                 max_x = x_turtle
@@ -78,7 +78,10 @@ class Race:
             if winner:
                 print(f"The winner is {winner}!")
 
-                # Setting colors of lost turtles to black
+                # Redening the winning turtle
+                self.turtles[winner].color("red")
+
+                # Blackening all the losing turtles
                 [self.turtles[t].color("black") for t in self.turtles.keys() if t != winner]
                 break
         
