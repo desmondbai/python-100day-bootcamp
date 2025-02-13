@@ -1,0 +1,34 @@
+Topics:
+- Event Listeners
+- Higher Order Functions:
+    - a function that can work with other functions:
+    - calculate(a,b,operation)
+    - keyword argument is recommended
+- Instances & State
+    - Instances: Examples of `class` objects
+    - States: 
+        - the attribute an instance take on
+
+
+
+
+
+
+Implementations:
+- `screen.listen()`:
+    - make screen to start listening for events
+- `turtle.onkey(fun,key)`
+    - "fun": a no-argument function
+
+
+
+Functions:
+- turtle.forward()
+- turtle.setheading()
+- turtle.left()
+
+
+
+
+
+
